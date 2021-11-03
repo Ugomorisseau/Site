@@ -50,12 +50,38 @@
     />
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="/CSS/footer.css" />
-
-    <title>Select CESI</title>
+    <link rel="stylesheet" href="../CSS/footer.css" />
+    <title>Select</title>
   </head>
 
   <style>
+
+.save{
+        margin-top: 40px;
+        background-color: #065a66;
+        height: 40px;
+        width: 110px;
+
+    }
+
+    .save:hover{
+         background-color: #1f292c;
+    }
+
+
+    .liste{
+        margin-top: 150px;
+        background-color: #065a66;
+        height: 40px;
+        width: 80px;
+
+    }
+
+    .liste:hover{
+         background-color: #1f292c;
+         
+    }
+
     .Titre {
       background-color: #065a66;
       background-image: linear-gradient(135deg, #065a66 0%, black 100%);
@@ -63,10 +89,56 @@
       width: 100%;
       position: fixed;
       top: 0px;
+
+    }
+
+    .choix-style {
+      text-align: center;
+    }
+
+    #label{
+      font-size: 20px;
     }
   </style>
 
-  <div class="Titre"></div>
+  <body>
+    
+    <script type="text/javascript">
+      function selection(selectObject) {
+        var value = selectObject.selectedIndex;
+        console.log(value);
+      if(value=='2'){
+        window.location.replace("./CESI.html");
+        
+      }
+        
+      if(value=='1'){
+        window.location.replace("./CESIprojets.html");
+      
+      } 
+      
+
+      
+    }
+    </script>
+  
+    <div class="Titre"></div>
+          <div class="choix-style">
+            <label id="label" for="">Sélectionner</label>
+        <select onChange="selection(this)" class="liste" id="selecti">
+            <option value="default">Default</option>
+            <option id="projets" value="Projets">Projets</option>
+            <option id="cours" value="Cours">Cours</option>
+          </select>
+        </div>
+    </div>
+  </body>
+    
+        
+    
+
+
+  <!-- Navbar -->
 
   <header class="header">
     <nav class="navbar navbar-expand-lg fixed-top py-3">
@@ -74,7 +146,7 @@
         <a
           href="../index.html"
           class="navbar-brand text-uppercase font-weight-bold"
-          >Accueil</a
+          >ACCUEIL</a
         >
 
         <button
@@ -129,9 +201,12 @@
     }
   </style>
 
+  <!-- Navbar -->
+
   <div class="espace"></div>
 
   <!-- Footer -->
+
   <footer class="container-fluid bg-grey py-5" style="bottom: 0">
     <div class="container">
       <div class="row">
@@ -210,6 +285,6 @@
       </div>
     </div>
   </footer>
+
   <!-- footer  -->
-  <body></body>
 </html>

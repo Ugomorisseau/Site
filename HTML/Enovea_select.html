@@ -54,21 +54,7 @@
     <title>Select</title>
   </head>
 
-    <script type="text/javascript">
- 
-  
-
-
-
-    </script>
-
-
-
   <style>
-
-
-    
-
 
 .save{
         margin-top: 40px;
@@ -109,25 +95,47 @@
     .choix-style {
       text-align: center;
     }
+
+    #label{
+      font-size: 20px;
+    }
   </style>
 
+  <body>
+    
+    <script type="text/javascript">
+      function selection(selectObject) {
+        var value = selectObject.selectedIndex;
+        console.log(value);
+      if(value=='2'){
+        window.location.replace("./ENOVEA.html");
+        
+      }
+        
+      if(value=='1'){
+        alert(value);
+      
+      } 
+      
+
+      
+    }
+    </script>
   
     <div class="Titre"></div>
-      <form action="#">
           <div class="choix-style">
-        <select class="liste">
+            <label id="label" for="">Sélectionner</label>
+        <select onChange="selection(this)" class="liste" id="selecti">
             <option value="default">Default</option>
             <option id="projets" value="Projets">Projets</option>
             <option id="cours" value="Cours">Cours</option>
           </select>
-          <input class="save" type="submit" value="Sauvegarder" name="Sauvegarder" />
         </div>
-      </form>
     </div>
-  
-    <body>
+  </body>
+    
         
-    </body>
+    
 
 
   <!-- Navbar -->
